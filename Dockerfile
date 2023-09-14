@@ -1,7 +1,6 @@
 FROM jenkins/agent:latest-jdk11
 USER root
-RUN apt-get update && apt-get install -y maven=3.6.3-5
-
+RUN apt-get update && apt-get install -y rh-maven36
 # Handle using OpenJDK 17 as the maven runtime
 RUN apt-get update && apt-get install -y openjdk-17-jdk
 
